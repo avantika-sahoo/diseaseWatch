@@ -10,11 +10,11 @@ Tools for cleaning, analyzing, visualizing, and reporting
 infectious disease surveillance data.
 }
 \author{
-\strong{Maintainer}: Jane Doe \email{jane@example.com}
+\strong{Maintainer}: Avantika Sahoo \email{sahooa@tamu.edu}
 
 Authors:
 \itemize{
-  \item Jane Doe \email{jane@example.com}
+  \item Avantika Sahoo \email{sahooa@tamu.edu}
 }
 
 }
