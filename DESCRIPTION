@@ -1,17 +1,21 @@
 Package: diseaseWatch
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Analyze Infectious Disease Data
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Avantika", "Sahoo",
+      email = "sahooa@tamu.edu",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Tools for cleaning, analyzing, and visualizing infectious disease 
+    data. This package provides functions to assist public health analysts in
+    calculating disease metrics, identifying trends, and generating
+    consolidated reports. Expected input is a tabular dataset containing
+    reporting dates, geographic regions, recorded case counts, and population
+    sizes.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
