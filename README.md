@@ -19,6 +19,12 @@ Load the package with:
 ``` r
 library(diseaseWatch)
 ```
+Basic example code:
+
+``` r
+library(diseaseWatch)
+## basic example code
+```
 
 ## Remaining Work
 
@@ -26,9 +32,4 @@ Current remaining work of this package is to expand current functions to handle 
 Additional functions to be added include visualization and report generation functions. Rcpp will be used to improve computation performance.
 Tests will be implemented to test accuracy and performance of package functions. Full documentation will be added. 
 
-
-``` r
-library(diseaseWatch)
-## basic example code
-```
 
