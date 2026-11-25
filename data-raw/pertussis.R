@@ -7,6 +7,7 @@ pertussis_raw <- read.csv(
 )
 
 # Inspect dataset
-head(pertussis_raw)
+print(head(pertussis_raw))
 str(pertussis_raw)
-summary(pertussis_raw)
+print(summary(pertussis_raw))
+print(names(pertussis_raw))
