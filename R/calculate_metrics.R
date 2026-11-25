@@ -4,6 +4,7 @@
 #' @description  This function calculates metrics from the infectious disease
 #'   data. Metrics of case counts are calculated, including the mean, median,
 #'   minumum, and maximum.
+#' @returns Metrics of infectious disease data
 
 #' @examples
 #' df <- data.frame(

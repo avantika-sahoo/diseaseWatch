@@ -4,6 +4,7 @@
 #' @description  This function prepares a data frame containing infectious
 #'   data for analysis. This function will clean the data by removing
 #'   duplicates, standardize formats, and handle missing values.
+#' @returns A cleaned and standardized data frame
 #' @export
 
 #' @examples
