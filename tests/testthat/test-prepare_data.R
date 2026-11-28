@@ -76,3 +76,31 @@ test_that("Row names are reset after duplicate removal", {
   expect_equal(rownames(result), c("1", "2"))
 
 })
+
+test_that("Missing value aliases are standardized", {
+
+  df <- data.frame(
+    region = c("A", "B", "C", "D", "E", "F", "G", "H"),
+    cases = c("", " ", "NA", "N/A", "null", NA, "100", "0")
+  )
+
+  result <- prepare_data(df)
+
+  expect_equal(
+    result$cases,
+    c(NA, NA, NA, NA, NA, NA, "100", "0")
+  )
+
+})
+
+test_that("Numeric and missing values are preserved", {
+
+  df <- data.frame(
+    cases = c(100, NA, 0, 200)
+  )
+
+  result <- prepare_data(df)
+
+  expect_identical(result$cases, df$cases)
+
+})

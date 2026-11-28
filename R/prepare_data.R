@@ -28,12 +28,19 @@ prepare_data <- function(df) {
   names(df) <- tolower(trimws(names(df)))
   names(df) <- gsub("\\s+", "_", names(df))
 
-  # Remove leading and trailing whitespace in text
+  # Common aliases for missing values
+  missing_values <- c("", "NA", "N/A", "NULL")
+
+  # Clean character columns
   for (col in names(df)) {
 
     if (is.character(df[[col]])) {
 
+      # Remove leading and trailing whitespace
       df[[col]] <- trimws(df[[col]])
+
+      # Standardize missing values
+      df[[col]][toupper(df[[col]]) %in% missing_values] <- NA_character_
 
     }
 
