@@ -88,7 +88,7 @@ test_that("Missing value aliases are standardized", {
 
   expect_equal(
     result$cases,
-    c(NA, NA, NA, NA, NA, NA, "100", "0")
+    c(NA, NA, NA, NA, NA, NA, 100, 0)
   )
 
 })
@@ -102,5 +102,41 @@ test_that("Numeric and missing values are preserved", {
   result <- prepare_data(df)
 
   expect_identical(result$cases, df$cases)
+
+})
+
+test_that("Numeric text is converted to numeric values", {
+
+  df <- data.frame(
+    cases = c("100", "2,003", NA)
+  )
+
+  result <- prepare_data(df)
+
+  expect_equal(result$cases, c(100, 2003, NA))
+
+})
+
+test_that("Nonnumeric character columns are preserved", {
+
+  df <- data.frame(
+    region = c("USA", "India", "South Korea")
+  )
+
+  result <- prepare_data(df)
+
+  expect_identical(result$region, df$region)
+
+})
+
+test_that("Mixed character columns are not converted", {
+
+  df <- data.frame(
+    values = c("100", "Unknown", "200")
+  )
+
+  result <- prepare_data(df)
+
+  expect_identical(result$values, df$values)
 
 })

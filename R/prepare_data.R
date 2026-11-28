@@ -46,6 +46,31 @@ prepare_data <- function(df) {
 
   }
 
+  # Convert numeric character columns to be numeric
+  for (col in names(df)) {
+
+    if (is.character(df[[col]])) {
+
+      # Remove commas
+      values <- gsub(",", "", df[[col]])
+
+      # Convert values to numeric
+      numeric_values <- suppressWarnings(as.numeric(values))
+
+      # Identify nonmissing original values
+      observed <- !is.na(df[[col]])
+
+      # Convert the column if all values are numeric
+      if (any(observed) && all(is.finite(numeric_values[observed]))) {
+
+        df[[col]] <- numeric_values
+
+      }
+
+    }
+
+  }
+
   # Remove duplicates
   df <- unique(df)
 
