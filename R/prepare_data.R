@@ -6,10 +6,8 @@
 #'   duplicates, standardize formats, and handle missing values.
 #' @returns A cleaned and standardized data frame
 #' @export
-
 #' @examples
 #' df <- data.frame(
-#'   date = c("2026-08-15", "2026-12-12"),
 #'   region = c("Region A", "Region A"),
 #'   cases = c(25, 32),
 #'   population = c(100000, 100000)

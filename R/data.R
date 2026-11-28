@@ -1,12 +1,12 @@
-#' Pertussis Cases by Week (Cumulative): 2024 - 2026
+#' COVID-19 Cases and Deaths Worldwide
 #'
 #' @description
-#' Cumulative weekly preliminary reported pertussis case counts in the
-#' United States from 2024 to 2026.
+#' A dataset containing reported COVID-19 cases, deaths,
+#' recoveries, active cases, tests, and population sizes
+#' in different countries.
 #'
 #' @source
-#' National Notifiable Diseases Surveillance System (2026).
-#' *Pertussis Cases by Week (Cumulative): 2024 - 2026*.
-#' Retrieved from \url{https://www.cdc.gov/pertussis/php/surveillance/}
+#' Covid Cases and Deaths WorldWide. Kaggle.
+#' \url{https://www.kaggle.com/datasets/themrityunjaypathak/covid-cases-and-deaths-worldwide}
 #'
-"pertussis"
+"covid_worldwide"
